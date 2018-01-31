@@ -357,24 +357,44 @@ var Fiat = {
     convertable: false,
     mileage: 88000,
     started: false,
+    fuel:0,
 
     start: function() {
-        started = true;
+        if (this.fuel <= 0) {
+            alert("The car is on empty, fill up before starting!");
+        }else {
+            Fiat.started = true;
+        }
+
     },
 
     stop:function(){
-        started = false;
+        Fiat.started = false;
     },
-
     drive: function() {
-        if (started) {
-            alert("Zoom Zoom");
-        }
-        else {
-            alert("You need to stert the engine rirst.");
-        }
-    }
-};
+        if (this.fuel > 0) {
+            alert(this.make + " " + this.model + " goez zoom zoom!");
+            this.fuel = this.fuel -1;
+        }else {
+            alert("Uh oh, out of fuel.");
+            this.stop();
+            alert("закончился бенз");
+         }
+     },
 
+    addFuel: function(amount) {
+        this.fuel = this.fuel + amount;
+    }
+
+};
+Fiat.addFuel(2);
+ Fiat.start();
  Fiat.drive();
- Fiat.stop();
+ Fiat.start();
+ Fiat.drive();
+ Fiat.start();
+ Fiat.drive();
+ Fiat.start();
+ Fiat.drive();
+ Fiat.start();
+ Fiat.drive();
