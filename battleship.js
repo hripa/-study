@@ -70,7 +70,7 @@ console.log(test);
 
 
 
-//случайные фразы
+// генератор случайных фразы
 function makePhreses() {
     var words1 = ['привет', 'кто ты?', 'уйди', 'Вася'];
     var words2 = ['выходи', 'привет мир', 'скажи', 'конец'];
@@ -131,15 +131,11 @@ while (i < hasBubbleGum.length) {
 var products = ["Choo Cgoo Chocolate", "Ice Mint", "Cake Batter", "Bubblegum"];
 var hasBubbleGum = [false, false, false, true];
 
-
-
 for (var i = 0; i < hasBubbleGum.length; i++) {
     if (hasBubbleGum[i]) {
         console.log(products[i] + " contains bubble gum");
     }
 }
-
-
 
 var scores = [60, 50, 60, 58, 54, 54,
     58, 50, 52, 54, 48, 69,
@@ -151,7 +147,6 @@ var scores = [60, 50, 60, 58, 54, 54,
 
 var output;
 var highScore = 0;
-
 
 for (var i = 0; i < scores.length; i++) {
     output = "Bubbles solution #" + i + " score: " + scores[i];
@@ -171,13 +166,10 @@ for (var i = 0; i < scores.length; i++) {
     if (scores[i] == highScore) {
         bestSolutions.push(i);
 
-
     }
 
 }
 console.log("Solutions with the highest score: " + bestSolutions);
-
-
 
 
 //Рефакторинг кода
@@ -186,7 +178,6 @@ var scores = [60, 50, 60, 58, 54, 54, 58, 50, 52, 54, 48, 69,
     34, 55, 51, 52, 44, 51, 69, 64, 66, 55, 52, 61,
     46, 31, 57, 52, 44, 18, 41, 53, 55, 61, 51, 44
 ];
-
 
 function printAndGetHighScore(scores) {
     var output;
@@ -201,7 +192,6 @@ function printAndGetHighScore(scores) {
     }
     return highScore;
 }
-
 
 function getBestResults(scores, highScore) {
     var bestSolutions = [];
@@ -236,7 +226,6 @@ function getMostEffectiveSolutoin(scores, costs, highScore) {
     return index;
 }
 
-
 var highScore = printAndGetHighScore(scores);
 console.log("Bebbles tests " + scores.length);
 console.log("Highest bubble score: " + highScore);
@@ -267,7 +256,6 @@ var dog = {
     age: 4,
     Breeed: "mixed",
     activiti: "fetch balls"
-
 };
 
 var bark;
@@ -281,7 +269,7 @@ console.log(speak);
 
 
 
-//.................
+//.ищем секретный пароль доктора )))................
 function getSecret(file, secretPassword) {
     superSecretFile.opened = superSecretFile.opened + 1;
     if (secretPassword == superSecretFile.password) {
@@ -295,7 +283,6 @@ function setSecret(file, secretPassword, secret) {
     if (secretPassword == superSecretFile.password) {
         superSecretFile.opened = 0;
         superSecretFile.contents = secret;
-
     }
 }
 
@@ -347,7 +334,7 @@ function displeyCar(car) {
 var carToSell = makeCar();
 displeyCar(carToSell);
 
-//МЕТОДЫ...............................................
+//Щбьекты,свойства и их значения, МЕТОДЫ...............................................
 var Fiat = {
     make: "Fiat",
     model: "500",
@@ -396,5 +383,23 @@ Fiat.addFuel(2);
  Fiat.drive();
  Fiat.start();
  Fiat.drive();
- Fiat.start();
- Fiat.drive();
+
+// DOM..................................
+
+var access = document.getElementByld("code9");
+var code = access.innerHTML;
+code = code + "midnight";
+alert(code);
+
+
+//Изменение стороки в HTML с помощью  innerHTML.............
+
+function addSongs() {
+    var song1 = document.getElementByld("song1");
+    var song2 = document.getElementByld("song2");
+    var song3 = document.getElementByld("song3");
+
+song1.innerHTML = "Blue Suede Strings, by Elvis Pagely";
+song2.innerHTML = "Great Objects on Fire, by Jerty JSON Lewis";
+song3.innerHTML = "I Code the Line, by Johnny JavaScript";
+}
